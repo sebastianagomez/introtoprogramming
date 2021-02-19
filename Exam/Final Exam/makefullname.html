@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Make Full Name</title>
+<script>
+
+    function makeFullName () {
+
+    let firstname = document.getElementById("name").value;
+    let lastname = document.getElementById("lastname").value;
+
+    let result = lastname + ", " + firstname ;
+
+    document.getElementById("output").innerHTML = result;
+
+    }
+</script>
+</head>
+
+<body>
+First Name: <input type="text" id="name"><br>
+Family Name: <input type="text" id="lastname"><br>
+<button type="button" onclick="makeFullName()">Click</button>
+<div id="output"></div>
+</body>
+
+</html>

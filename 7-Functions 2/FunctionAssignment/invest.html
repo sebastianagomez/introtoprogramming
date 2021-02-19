@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <title>Investment Calculator</title>
+
+    <script>
+
+        function doFV() {
+
+            var principal = parseFloat(document.getElementById("amountBorrowed").value);
+            var annualRate = parseFloat(document.getElementById("annualInterestRate").value);
+            var years = parseFloat(document.getElementById("numberOfYears").value);
+            var periodsPerYear = parseFloat(document.getElementById("paymentsPerYear").value);
+            
+            let result = computeFutureValue (principal, annualRate, years, periodsPerYear);
+
+            document.getElementById("outputDiv").innerHTML = "$" + Math.round(result *100)/100;
+
+        }
+
+        function computeFutureValue (principal, annualRate, years, periodsPerYear) {
+
+            let formulainvest = principal * (1 + (annualRate / periodsPerYear)) ** (years * periodsPerYear);
+            return formulainvest;
+        }
+
+    </script>
+
+</head>
+<body>
+    <h2>Investment Calculator</h2>
+    
+    Amount invested (principal) <input type="number" id="amountBorrowed">
+    <br><br>
+
+    Annual Rate (example .08) <input type="number" id="annualInterestRate">
+    <br><br>
+
+    Number of years <input type="number" id="numberOfYears">
+    <br><br>
+
+    Periods of years <input type="number" id="paymentsPerYear">
+    <br><br><br>
+
+    <button type="button" onclick="doFV()">Compute future value</button>
+    <br><br>
+    <div id="outputDiv"></div>
+    
+</body>
+</html>

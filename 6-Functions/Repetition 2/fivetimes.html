@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <title>fiveTimes</title>
+
+        <script>
+        function fiveTimes(){
+   
+            let times;
+            let output = "";
+            let five = 5;
+            let i = 1;            
+            do {
+                times = five * i;
+                output += five + " x " + i + " = " + times + "<br>";
+                i++;
+            } while (i <= 12)
+
+            document.getElementById('OutputDiv').innerHTML = output;
+
+        }            
+
+        </script>
+    </head>
+
+    <body>
+
+        <h2>Table of 5</h2>
+
+        <button type="button" onclick="fiveTimes()">Go ahead!</button>
+
+        <div id="OutputDiv"></div>
+
+    </body>       
+
+</html>

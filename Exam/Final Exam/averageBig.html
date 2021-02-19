@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Average Big</title>
+<script>
+
+    function averageBig () {
+
+        let list = [70, 1010, 950, 2014, 6];
+        let index = 1000;
+    
+        let result;
+
+        for ( i = 0; i < list.length; i++ ) {
+
+        if (list[i] >= index){
+
+            let milindex = list[i].reduce(averageBig);
+            let sumindex = milindex / 2; 
+            result = sumindex;
+
+        }
+
+        return result;
+        
+        }
+
+    document.getElementById('output').innerHTML = result;
+    
+}
+</script>
+</head>
+
+<body>
+
+<button type="button" onclick="averageBig()">Click</button>
+<div id="output"></div>
+
+</body>
+
+</html>

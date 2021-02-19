@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Convert Quarts to Liters</title>   
+<script>
+
+function quartoliter () {
+
+    let text = document.getElementById("quartsInputBox").value;
+
+    let quartsInputBox = parseFloat(text);
+
+    let liters = quartsInputBox * 0.94635/1;
+
+    document.getElementById("litersDiv").innerHTML = "Quarts to liter: " + liters;
+
+        
+}
+</script>    
+</head>
+<body>
+    <h2>Quarts to Liters Converter</h2>
+<p>Type a value in the Quarts field to convert the value to Liters:</p>
+    <input type="number" id="quartsInputBox">
+    <button type="button" onclick="quartoliter()">Convert</button>
+    <div id="litersDiv"></div>
+</body>
+</html>

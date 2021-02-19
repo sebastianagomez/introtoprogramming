@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <title>Math Quiz</title>
+    <script>
+
+        function mathQuiz(){
+            let n1 = parseFloat(document.getElementById("fN").value);
+            let n2 = parseFloat(document.getElementById("sN").value);
+            let op = document.getElementById("oP").value;
+            let answer = parseFloat(document.getElementById("answer").value);
+
+            let result;
+            let message;
+
+            if (op == "-" ) {
+                let result = n1 - n2;   
+            } else if (op == "+"){
+                let result = n1 + n2;
+            } else if (op == "/"){
+                let result = n1 / n2;
+            } else if (op == "*"){
+                let result = n1 * n2;
+            }
+
+            if (result == answer){
+                message = "Good job! This is the correct answer!";
+
+            }else {
+                message = "You are close! But this is not the correct answer.";
+            }
+            document.getElementById("result").innerHTML= message;
+
+        }
+    </script>
+
+</head>
+<body>
+    <h1>Math Quiz</h1>
+
+    <input type="number" id="fN">
+
+    <input type="text" id="oP">
+    
+    <input type="number" id="sN">   
+    =
+    <input type="number" id="answer">
+
+    <button type="button" onclick="mathQuiz()">Result:</button>
+
+    <div id="result"></div>
+
+</body>
+
+</html>

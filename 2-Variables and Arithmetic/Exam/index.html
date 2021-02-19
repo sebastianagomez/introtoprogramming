@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Rate of Change</title>
+<script>
+
+// Your JavaScript function belongs here.
+
+function computeRateOfChange(){
+
+    let input1 = document.getElementById("prevPrice").value;
+    let input2 = document.getElementById("currPrice").value;
+
+    let ratechange = (input2 - input1)/input1;
+
+    document.getElementById("rate").innerHTML=ratechange;
+
+}
+</script>
+</head>
+
+<body>
+    <h1>Rate of Change</h1>
+    Previous Price <input type="text" id="prevPrice"><br>
+    Current Price <input type="text" id="currPrice"><br>
+    <button type="button" onclick="computeRateOfChange()">Rate of Change</button><br>
+    Rate of Change <div id="rate"></div>
+</body>
+</html>

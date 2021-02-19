@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Get Last</title>
+<script>
+
+    function getLast () {
+
+        let list = [5, -2.1, 6.3, 9, 5, 13]; 
+
+        let result = list[list.length - 1];
+
+        document.getElementById('output').innerHTML = result;
+    }
+
+</script>
+</head>
+
+<body>
+<p>List: 5, -2.1, 6.3, 9, 5, 13 </p>
+<button type="button" onclick="getLast()">Click</button>
+<div id="output"></div>
+</body>
+
+</html>
